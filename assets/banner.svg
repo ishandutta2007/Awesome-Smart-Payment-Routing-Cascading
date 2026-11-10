@@ -1,0 +1,226 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 420" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradients -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0b0f19" />
+      <stop offset="50%" stop-color="#0d1b2a" />
+      <stop offset="100%" stop-color="#051923" />
+    </linearGradient>
+
+    <!-- Glowing Accent Gradients -->
+    <linearGradient id="primaryGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00f2fe" />
+      <stop offset="100%" stop-color="#4facfe" />
+    </linearGradient>
+
+    <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#43e97b" />
+      <stop offset="100%" stop-color="#38f9d7" />
+    </linearGradient>
+
+    <linearGradient id="purpleGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fa709a" />
+      <stop offset="100%" stop-color="#fee140" />
+    </linearGradient>
+
+    <linearGradient id="lineGrad1" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00f2fe" stop-opacity="0.1" />
+      <stop offset="50%" stop-color="#00f2fe" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="#43e97b" stop-opacity="0.1" />
+    </linearGradient>
+
+    <!-- Card Backgrounds -->
+    <linearGradient id="cardBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e293b" stop-opacity="0.75" />
+      <stop offset="100%" stop-color="#0f172a" stop-opacity="0.85" />
+    </linearGradient>
+
+    <!-- Filters for Glow Effect -->
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="6" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+    <filter id="softGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+
+    <style>
+      .title-text {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        font-weight: 800;
+        font-size: 46px;
+        fill: #ffffff;
+        letter-spacing: -1px;
+      }
+      .subtitle-text {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        font-weight: 400;
+        font-size: 19px;
+        fill: #94a3b8;
+        letter-spacing: 0.2px;
+      }
+      .badge-text {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        font-weight: 600;
+        font-size: 12px;
+        letter-spacing: 0.5px;
+      }
+      .mono-text {
+        font-family: 'SF Mono', Consolas, Monaco, monospace;
+        font-size: 11px;
+        font-weight: 500;
+        fill: #38bdf8;
+      }
+
+      /* Animated routing pulse */
+      @keyframes pulseBeam {
+        0% { stroke-dashoffset: 400; }
+        100% { stroke-dashoffset: 0; }
+      }
+      @keyframes floatSlow {
+        0%, 100% { transform: translateY(0px); }
+        50% { transform: translateY(-8px); }
+      }
+      @keyframes floatDelayed {
+        0%, 100% { transform: translateY(0px); }
+        50% { transform: translateY(8px); }
+      }
+      @keyframes glowPulse {
+        0%, 100% { opacity: 0.35; }
+        50% { opacity: 0.75; }
+      }
+      @keyframes packetMove {
+        0% { offset-distance: 0%; opacity: 0; }
+        15% { opacity: 1; }
+        85% { opacity: 1; }
+        100% { offset-distance: 100%; opacity: 0; }
+      }
+
+      .animated-flow-1 {
+        stroke-dasharray: 12 12;
+        animation: pulseBeam 14s linear infinite;
+      }
+      .animated-flow-2 {
+        stroke-dasharray: 8 8;
+        animation: pulseBeam 10s linear infinite reverse;
+      }
+      .floating-card-1 {
+        animation: floatSlow 6s ease-in-out infinite;
+      }
+      .floating-card-2 {
+        animation: floatDelayed 7s ease-in-out infinite;
+      }
+      .ambient-glow {
+        animation: glowPulse 5s ease-in-out infinite;
+      }
+    </style>
+  </defs>
+
+  <!-- Canvas Background -->
+  <rect width="1200" height="420" rx="16" fill="url(#bgGrad)" />
+  <rect width="1200" height="420" rx="16" fill="none" stroke="#334155" stroke-width="1.5" stroke-opacity="0.4" />
+
+  <!-- Ambient Light Orbs (Background) -->
+  <circle cx="200" cy="80" r="140" fill="#00f2fe" opacity="0.12" filter="url(#glow)" class="ambient-glow" />
+  <circle cx="1020" cy="300" r="160" fill="#43e97b" opacity="0.1" filter="url(#glow)" class="ambient-glow" />
+  <circle cx="900" cy="90" r="120" fill="#818cf8" opacity="0.08" filter="url(#glow)" />
+
+  <!-- Background Dynamic Network Routing Lines -->
+  <g opacity="0.4">
+    <!-- Top-left to Center Grid Path -->
+    <path d="M -50 120 L 220 120 L 320 190 L 550 190" fill="none" stroke="#00f2fe" stroke-width="1.5" class="animated-flow-1" />
+    <path d="M 120 -20 L 120 120 L 260 260 L 680 260" fill="none" stroke="#38bdf8" stroke-width="1.2" stroke-opacity="0.6" />
+    
+    <!-- Right side cascading paths -->
+    <path d="M 640 190 L 820 190 L 920 110 L 1250 110" fill="none" stroke="#43e97b" stroke-width="1.8" class="animated-flow-1" />
+    <path d="M 720 230 L 850 230 L 960 310 L 1250 310" fill="none" stroke="#f43f5e" stroke-width="1.4" class="animated-flow-2" />
+    <path d="M 780 260 L 910 360 L 1150 360" fill="none" stroke="#818cf8" stroke-width="1.2" class="animated-flow-1" />
+  </g>
+
+  <!-- Interactive Routing Node Badges / Floating Elements (Right Side / Peripheral) -->
+  
+  <!-- Floating Metric Pill 1: Auto Retry & Cascading (Top Right) -->
+  <g class="floating-card-1" transform="translate(860, 50)">
+    <rect width="280" height="64" rx="12" fill="url(#cardBg)" stroke="#38bdf8" stroke-width="1.2" stroke-opacity="0.5" filter="url(#softGlow)" />
+    <circle cx="32" cy="32" r="14" fill="#0284c7" fill-opacity="0.25" />
+    <circle cx="32" cy="32" r="6" fill="#38bdf8" />
+    <text x="58" y="27" class="badge-text" fill="#f8fafc">CASCADING ENGINE</text>
+    <text x="58" y="46" class="mono-text">Failover Rate: 99.98% OK</text>
+    <rect x="215" y="20" width="50" height="22" rx="6" fill="#0369a1" fill-opacity="0.4" />
+    <text x="223" y="35" class="badge-text" fill="#38bdf8" font-size="10">SUB-30ms</text>
+  </g>
+
+  <!-- Floating Metric Pill 2: Least-Cost Routing (Middle Right) -->
+  <g class="floating-card-2" transform="translate(890, 155)">
+    <rect width="260" height="64" rx="12" fill="url(#cardBg)" stroke="#43e97b" stroke-width="1.2" stroke-opacity="0.5" filter="url(#softGlow)" />
+    <circle cx="32" cy="32" r="14" fill="#059669" fill-opacity="0.25" />
+    <circle cx="32" cy="32" r="6" fill="#43e97b" />
+    <text x="58" y="27" class="badge-text" fill="#f8fafc">LEAST-COST ROUTER</text>
+    <text x="58" y="46" class="mono-text">Fee Savings: +34.2%</text>
+    <circle cx="230" cy="32" r="4" fill="#43e97b" filter="url(#softGlow)" />
+  </g>
+
+  <!-- Floating Metric Pill 3: Multi-PSP Distribution (Bottom Right) -->
+  <g class="floating-card-1" transform="translate(840, 260)">
+    <rect width="300" height="68" rx="12" fill="url(#cardBg)" stroke="#a855f7" stroke-width="1.2" stroke-opacity="0.4" filter="url(#softGlow)" />
+    <circle cx="32" cy="34" r="14" fill="#7e22ce" fill-opacity="0.25" />
+    <circle cx="32" cy="34" r="6" fill="#c084fc" />
+    <text x="58" y="28" class="badge-text" fill="#f8fafc">MULTI-ACQUIRER SPLIT</text>
+    <text x="58" y="48" class="mono-text">Stripe 45% · Adyen 40% · Local 15%</text>
+  </g>
+
+  <!-- Central / Foreground Content (Hero Header & Titles) -->
+  <g transform="translate(70, 75)">
+    <!-- Category Pill -->
+    <g transform="translate(0, 0)">
+      <rect width="270" height="30" rx="15" fill="#0369a1" fill-opacity="0.3" stroke="#00f2fe" stroke-width="1" stroke-opacity="0.5" />
+      <circle cx="16" cy="15" r="4" fill="#00f2fe" filter="url(#softGlow)" />
+      <text x="30" y="20" class="badge-text" fill="#38bdf8">PAYMENT ORCHESTRATION &amp; ROUTING</text>
+    </g>
+
+    <!-- Main Title -->
+    <text x="0" y="85" class="title-text">
+      Smart Payment Routing
+    </text>
+    <text x="0" y="138" class="title-text" fill="url(#primaryGrad)">
+      &amp; Intelligent Cascading
+    </text>
+
+    <!-- Subtitle / Value Proposition -->
+    <text x="0" y="185" class="subtitle-text">
+      Curated open-source engines and enterprise SaaS platforms to dynamically route
+    </text>
+    <text x="0" y="213" class="subtitle-text">
+      transactions, eliminate vendor lock-in, and maximize authorization rates.
+    </text>
+
+    <!-- Key Feature Badges Row -->
+    <g transform="translate(0, 248)">
+      <!-- Badge 1: Dynamic Failover -->
+      <g transform="translate(0, 0)">
+        <rect width="165" height="32" rx="8" fill="#1e293b" stroke="#334155" stroke-width="1" />
+        <circle cx="16" cy="16" r="4" fill="#43e97b" />
+        <text x="28" y="20" class="badge-text" fill="#e2e8f0">Dynamic Failover</text>
+      </g>
+      <!-- Badge 2: Least Cost Routing -->
+      <g transform="translate(177, 0)">
+        <rect width="165" height="32" rx="8" fill="#1e293b" stroke="#334155" stroke-width="1" />
+        <circle cx="16" cy="16" r="4" fill="#38bdf8" />
+        <text x="28" y="20" class="badge-text" fill="#e2e8f0">Least-Cost Routing</text>
+      </g>
+      <!-- Badge 3: Token Vaults -->
+      <g transform="translate(354, 0)">
+        <rect width="165" height="32" rx="8" fill="#1e293b" stroke="#334155" stroke-width="1" />
+        <circle cx="16" cy="16" r="4" fill="#c084fc" />
+        <text x="28" y="20" class="badge-text" fill="#e2e8f0">Universal Token Vault</text>
+      </g>
+      <!-- Badge 4: Zero Lock-in -->
+      <g transform="translate(531, 0)">
+        <rect width="155" height="32" rx="8" fill="#1e293b" stroke="#334155" stroke-width="1" />
+        <circle cx="16" cy="16" r="4" fill="#fbbf24" />
+        <text x="28" y="20" class="badge-text" fill="#e2e8f0">Multi-PSP Redundancy</text>
+      </g>
+    </g>
+  </g>
+</svg>
