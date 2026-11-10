@@ -57,9 +57,9 @@ Enterprise cloud-hosted smart payment routing and payment orchestration engines.
 
 ## 🟩 Open-Source Software
 
-Self-hosted, transparent, and community-audited smart payment routing engines, multi-gateway switches, and financial ledgers. Sorted by GitHub stars descending. 💻
+Self-hosted, transparent, and community-audited smart payment routing engines, multi-gateway switches, and financial ledgers. Sorted by GitHub_Stars descending. 💻
 
-### [Juspay Hyperswitch](https://github.com/juspay/hyperswitch) [![GitHub stars](https://img.shields.io/github/stars/juspay/hyperswitch?style=social&color=white)](https://github.com/juspay/hyperswitch/stargazers)
+### [Juspay Hyperswitch](https://github.com/juspay/hyperswitch) [![GitHub_Stars](https://img.shields.io/github/stars/juspay/hyperswitch?style=social&color=white)](https://github.com/juspay/hyperswitch/stargazers)
 * **Stack:** Rust 🦀 | **License:** Apache-2.0 📜  
 * **Overview:** Hyperswitch is the premier production-grade open-source payment orchestration switch designed to unify payments across 100+ gateways and payment aggregators through a single API. It handles high-concurrency peak processing (up to 5,000 TPS) with active-active multi-region deployment.
 * **Smart Routing & Cascading:**
@@ -68,7 +68,7 @@ Self-hosted, transparent, and community-audited smart payment routing engines, m
   * **Smart Retries & Cascading:** Automatically cascade declined transactions to secondary and tertiary gateways based on raw ISO-8583 response codes and issuer decline telemetry. 🔄
   * **PCI-Compliant Token Vault:** Independent locker service to secure and tokenize cards, decoupling cardholder data from downstream payment providers. 🔐
 
-### [BTCPay Server](https://github.com/btcpayserver/btcpayserver) [![GitHub stars](https://img.shields.io/github/stars/btcpayserver/btcpayserver?style=social&color=white)](https://github.com/btcpayserver/btcpayserver/stargazers)
+### [BTCPay Server](https://github.com/btcpayserver/btcpayserver) [![GitHub_Stars](https://img.shields.io/github/stars/btcpayserver/btcpayserver?style=social&color=white)](https://github.com/btcpayserver/btcpayserver/stargazers)
 * **Stack:** C# (.NET Core) 🔷 | **License:** MIT 📜  
 * **Overview:** BTCPay Server is an open-source, self-hosted cryptocurrency payment processor engineered for censorship resistance and zero intermediary processing fees.
 * **Smart Routing & Cascading:**
@@ -76,7 +76,7 @@ Self-hosted, transparent, and community-audited smart payment routing engines, m
   * **Liquid & Lightning Auto-Routing:** Intelligently balances liquidity across Lightning payment channels to guarantee payment routing success for micro-invoices. 🌊
   * **Auto-Forwarding & Payout Cascading:** Automatically forwards and sweeps incoming client deposits to multi-signature cold storage or liquid custodial addresses based on threshold rules. 💼
 
-### [Kill Bill](https://github.com/killbill/killbill) [![GitHub stars](https://img.shields.io/github/stars/killbill/killbill?style=social&color=white)](https://github.com/killbill/killbill/stargazers)
+### [Kill Bill](https://github.com/killbill/killbill) [![GitHub_Stars](https://img.shields.io/github/stars/killbill/killbill?style=social&color=white)](https://github.com/killbill/killbill/stargazers)
 * **Stack:** Java ☕ | **License:** Apache-2.0 📜  
 * **Overview:** Kill Bill is an enterprise-grade open-source subscription billing and payments engine designed to replace proprietary SaaS billing services with full infrastructure sovereignty.
 * **Smart Routing & Cascading:**
@@ -84,7 +84,7 @@ Self-hosted, transparent, and community-audited smart payment routing engines, m
   * **Configurable Dunning & Retry Cascading:** Highly configurable state-machine dunning workflows that retry failed recurring payments at customizable intervals and cascade to alternative registered payment methods. 🔁
   * **Payment Control APIs:** Intercepts authorization attempts prior to execution for customized risk checks, route decisions, and fee minimization calculations. 🛡️
 
-### [ActiveMerchant](https://github.com/activemerchant/active_merchant) [![GitHub stars](https://img.shields.io/github/stars/activemerchant/active_merchant?style=social&color=white)](https://github.com/activemerchant/active_merchant/stargazers)
+### [ActiveMerchant](https://github.com/activemerchant/active_merchant) [![GitHub_Stars](https://img.shields.io/github/stars/activemerchant/active_merchant?style=social&color=white)](https://github.com/activemerchant/active_merchant/stargazers)
 * **Stack:** Ruby 💎 | **License:** MIT 📜  
 * **Overview:** Developed originally by Shopify and maintained by an extensive community, ActiveMerchant is the foundational open-source payment gateway abstraction library in Ruby.
 * **Smart Routing & Cascading:**
@@ -92,7 +92,7 @@ Self-hosted, transparent, and community-audited smart payment routing engines, m
   * **Custom Gateway Switching:** Functions as the driver layer for custom application-level payment routing engines to seamlessly redirect transactions to fallback gateways when primary endpoints fail. 🔀
   * **Normalized Decline Codes:** Harmonizes distinct gateway response objects to enable uniform downstream cascading and retry logic. 📑
 
-### [Formance Stack](https://github.com/formancehq/stack) [![GitHub stars](https://img.shields.io/github/stars/formancehq/stack?style=social&color=white)](https://github.com/formancehq/stack/stargazers)
+### [Formance Stack](https://github.com/formancehq/stack) [![GitHub_Stars](https://img.shields.io/github/stars/formancehq/stack?style=social&color=white)](https://github.com/formancehq/stack/stargazers)
 * **Stack:** Go 🐹 | **License:** Apache-2.0 📜  
 * **Overview:** Formance provides open-source programmable financial architecture and dual-entry ledger microservices to model and track money movements across diverse payment rails.
 * **Smart Routing & Cascading:**
@@ -100,14 +100,14 @@ Self-hosted, transparent, and community-audited smart payment routing engines, m
   * **Connector Framework:** Connects natively to Stripe, Wise, Modulr, Mangopay, and banking APIs, continuously pulling transaction state to trigger multi-step routing sequences. 🔗
   * **Idempotent Ledger Integration:** Ensures zero lost funds or duplicate settlements across asynchronous multi-gateway payment routing pipelines. 💰
 
-### [Juspay Decision Engine](https://github.com/juspay/decision-engine) [![GitHub stars](https://img.shields.io/github/stars/juspay/decision-engine?style=social&color=white)](https://github.com/juspay/decision-engine/stargazers)
+### [Juspay Decision Engine](https://github.com/juspay/decision-engine) [![GitHub_Stars](https://img.shields.io/github/stars/juspay/decision-engine?style=social&color=white)](https://github.com/juspay/decision-engine/stargazers)
 * **Stack:** Rust 🦀 / JavaScript 🟨 | **License:** Apache-2.0 📜  
 * **Overview:** A decoupled, low-latency decision control plane extracted from Juspay's payment infrastructure, built specifically for evaluating routing algorithms and transaction rules.
 * **Smart Routing & Cascading:**
   * **Sub-Millisecond Policy Evaluation:** Evaluates multi-attribute payment criteria (card BIN, issuer bank health, fees, time of day) with ultra-low latency. ⚡
   * **Dynamic Feedback Loop:** Ingests live telemetry and processor health metrics to immediately steer transactions away from degraded gateways to optimal routes. 🔄
 
-### [Conductor Smart Payment Switch](https://github.com/malwarebo/conductor) [![GitHub stars](https://img.shields.io/github/stars/malwarebo/conductor?style=social&color=white)](https://github.com/malwarebo/conductor/stargazers)
+### [Conductor Smart Payment Switch](https://github.com/malwarebo/conductor) [![GitHub_Stars](https://img.shields.io/github/stars/malwarebo/conductor?style=social&color=white)](https://github.com/malwarebo/conductor/stargazers)
 * **Stack:** Go 🐹 | **License:** MIT 📜  
 * **Overview:** An open-source smart payment gateway switch and router supporting integrations across Stripe, Xendit, Airwallex, and Razorpay.
 * **Smart Routing & Cascading:**
